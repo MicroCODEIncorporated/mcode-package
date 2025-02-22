@@ -155,6 +155,8 @@ Contributor's names and contact info...
 
 ## Version History
 
+* v0.6.9
+    - upgraded to mcode-data v0.5.9, mcode-log v0.5.9, mcode-list v0.5.9, and mcode-cache v0.6.9
 * v0.6.8
     - upgraded to mcode-data v0.5.8, mcode-log v0.5.8, mcode-list v0.5.8, and mcode-cache v0.6.8
 * v0.6.2
