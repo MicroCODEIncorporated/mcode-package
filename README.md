@@ -155,6 +155,11 @@ Contributor's names and contact info...
 
 ## Version History
 
+* v0.7.0
+    - Added more standardized JSDoc module headers for inclusion in end-product documentation.
+    - upgraded to mcode-data v0.6.0, mcode-log v0.6.0, mcode-list v0.6.0, and mcode-cache v0.7.0
+* v0.6.10
+    - upgraded to mcode-data v0.5.10, mcode-log v0.5.10, mcode-list v0.5.10, and mcode-cache v0.6.10
 * v0.6.9
     - upgraded to mcode-data v0.5.9, mcode-log v0.5.9, mcode-list v0.5.9, and mcode-cache v0.6.9
 * v0.6.8

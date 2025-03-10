@@ -1,17 +1,19 @@
 // #region  F I L E
 // <copyright file="mcode-list/index.js" company="MicroCODE Incorporated">Copyright © 2022-2024 MicroCODE, Inc. Troy, MI</copyright><author>Timothy J. McGuire</author>
 // #region  M O D U L E
-
 // #region  D O C U M E N T A T I O N
-/*
- *      Title:    MicroCODE Package Bundler
- *      Module:   modules (node_modules/mcode-package/index.js)
+/**
  *      Project:  MicroCODE MERN Applications
- *      Customer: Internal+MIT xPRO Course
- *      Creator:  MicroCODE Incorporated
- *      Date:     January 2022-2024
- *      Author:   Timothy McGuire
+ *      Customer: Internal + MIT xPRO Course
+ *      @module   'mcode-package.js'
+ *      @memberof mcode
+ *      @created  January 2022-2024
+ *      @author   Timothy McGuire, MicroCODE, Inc.
+ *      @description >
+ *      MicroCODE NPM Package 'Bundler'
  *
+ *      LICENSE:
+ *      --------
  *      MIT License: MicroCODE.mcode-list
  *
  *      Copyright (c) 2022-2024 Timothy McGuire, MicroCODE, Inc.
@@ -37,13 +39,11 @@
  *
  *      DESCRIPTION:
  *      ------------
- *
  *      This module implements the MicroCODE's Common JavaScript Package 'Bundler'.
  *
  *
  *      REFERENCES:
  *      -----------
- *
  *      1. MIT xPRO Course: Professional Certificate in Coding: Full Stack Development with MERN
  *
  *
@@ -51,15 +51,15 @@
  *
  *      MODIFICATIONS:
  *      --------------
+ *      Date:         By-Group:   Rev:    Description:
  *
- *  Date:         By-Group:   Rev:    Description:
+ *      30-Jan-2024   TJM-MCODE  {0001}   New module to house all our public MicroCODE packages.
+ *      01-Feb-2024   TJM-MCODE  {0002}   Changed to the Universal Module Definition (UMD) pattern to support AMD,
+ *                                        CommonJS/Node.js, and browser global in our exported module.
+ *      28-Jun-2024   TJM-MCODE  {0003}   Added 'mcode-data' package to the list of MicroCODE packages.
+ *      28-Aug-2024   TJM-MCODE  {0004}   Added 'mcode-cache' package to the list of MicroCODE packages.
+ *      29-Aug-2024   TJM-MCODE  {0005}   Changed 'mcode' package merge to get all methods and properties (get/set).
  *
- *  30-Jan-2024   TJM-MCODE  {0001}   New module to house all our public MicroCODE packages.
- *  01-Feb-2024   TJM-MCODE  {0002}   Changed to the Universal Module Definition (UMD) pattern to support AMD,
- *                                    CommonJS/Node.js, and browser global in our exported module.
- *  28-Jun-2024   TJM-MCODE  {0003}   Added 'mcode-data' package to the list of MicroCODE packages.
- *  28-Aug-2024   TJM-MCODE  {0004}   Added 'mcode-cache' package to the list of MicroCODE packages.
- *  29-Aug-2024   TJM-MCODE  {0005}   Changed 'mcode' package merge to get all methods and properties (get/set).
  *
  *
  *
