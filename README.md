@@ -155,6 +155,10 @@ Contributor's names and contact info...
 
 ## Version History
 
+* v0.7.1
+    - Use _<package> naming convention for internal use of our own mcode.<package> within other packages.
+    - Corrected logging of exceptions in package loader.
+    - Supplied our 'bootstrap.js' for loading 'mcode.*' package as the first thing in a NODE Server.
 * v0.7.0
     - Added more standardized JSDoc module headers for inclusion in end-product documentation.
     - upgraded to mcode-data v0.6.0, mcode-log v0.6.0, mcode-list v0.6.0, and mcode-cache v0.7.0

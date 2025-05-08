@@ -74,7 +74,7 @@
 
 // #region  I M P O R T S
 
-const log = require('mcode-log');
+const _log = require('mcode-log');
 const packageJson = require('./package.json');
 
 // #endregion
@@ -111,7 +111,7 @@ try
     // Assign all methods and properties to mcode, preserving getters and setters
     Object.defineProperties(mcode, Object.getOwnPropertyDescriptors(mcodeLog));
 
-    log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-log' v${mcodeLogJson.version} `, MODULE_NAME);
+    _log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-log' v${mcodeLogJson.version} `, MODULE_NAME);
 }
 catch (exp)
 {
@@ -127,7 +127,7 @@ try
     // Assign all methods and properties to mcode, preserving getters and setters
     Object.defineProperties(mcode, Object.getOwnPropertyDescriptors(mcodeList));
 
-    log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-list' v${mcodeListJson.version} `, MODULE_NAME);
+    _log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-list' v${mcodeListJson.version} `, MODULE_NAME);
 }
 catch (exp)
 {
@@ -143,7 +143,7 @@ try
     // Assign all methods and properties to mcode, preserving getters and setters
     Object.defineProperties(mcode, Object.getOwnPropertyDescriptors(mcodeData));
 
-    log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-data' v${mcodeDataJson.version} `, MODULE_NAME);
+    _log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-data' v${mcodeDataJson.version} `, MODULE_NAME);
 }
 catch (exp)
 {
@@ -159,12 +159,12 @@ try
     // Assign all methods and properties to mcode, preserving getters and setters
     Object.defineProperties(mcode, Object.getOwnPropertyDescriptors(mcodeCache));
 
-    log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-cache' v${mcodeCacheJson.version} `, MODULE_NAME);
+    _log.success(`MicroCODE 'mcode-package' v${packageJson.version} - loaded package: 'mcode-cache' v${mcodeCacheJson.version} `, MODULE_NAME);
 }
 catch (exp)
 {
     // mcode-cache is not installed - OPTIONAL, no error thrown
-    mcode.exp('mcode-cache failed to load.', MODULE_NAME, exp);
+    _log.exp('mcode-cache failed to load.', MODULE_NAME, exp);
 }
 
 // #endregion
