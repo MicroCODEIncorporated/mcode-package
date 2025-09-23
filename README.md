@@ -154,7 +154,9 @@ Contributor's names and contact info...
 
 
 ## Version History
-
+* v0.8.0
+    - Updated mcode-cache to v0.8.0
+    - See Release Notes for mcode-cache for details, this is a BREAKING CHANGE.
 * v0.7.1
     - Use _<package> naming convention for internal use of our own mcode.<package> within other packages.
     - Corrected logging of exceptions in package loader.
