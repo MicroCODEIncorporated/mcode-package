@@ -1,6 +1,6 @@
 {
   "name": "mcode-package",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "An npm package to collect all MicroCODE 'mcode-' packages into a single 'mcode.' namespace. This allows any of the packages to be used independently--mcode-log, mcode-list, etc.--but have them all collected into 'mcode.<function>()' syntax when used togther.",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,6 @@
     "mcode-cache": "^0.8.0",
     "mcode-data": "^0.6.2",
     "mcode-list": "^0.6.1",
-    "mcode-log": "^0.7.0"
+    "mcode-log": "^0.7.1"
   }
 }

@@ -155,6 +155,8 @@ Contributor's names and contact info...
 
 ## Version History
 
+* v0.8.2
+    - Updated mcode-log package to v0.7.1 to get latest documentation updates.
 * v0.8.1
     - Updated mcode-log to v0.7.0
     - See Release Notes for mcode-log for details, mainly direct HTML output of colorized JSON objects.
