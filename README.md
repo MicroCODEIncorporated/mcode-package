@@ -154,6 +154,10 @@ Contributor's names and contact info...
 
 
 ## Version History
+
+* v0.8.1
+    - Updated mcode-log to v0.7.0
+    - See Release Notes for mcode-log for details, mainly direct HTML output of colorized JSON objects.
 * v0.8.0
     - Updated mcode-cache to v0.8.0
     - See Release Notes for mcode-cache for details, this is a BREAKING CHANGE.
