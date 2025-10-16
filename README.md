@@ -156,7 +156,7 @@ Contributor's names and contact info...
 
 ## Version History
 
-- v0.8.4
+- v0.8.5
   - Updated mcode-log package to v0.7.3 to get latest bug fixes and colorization updates.
 - v0.8.3
   - Updated mcode-log package to v0.7.2 to get latest colorization & documentation updates.
