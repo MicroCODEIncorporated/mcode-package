@@ -156,6 +156,8 @@ Contributor's names and contact info...
 
 ## Version History
 
+- v0.8.6
+  - Updated mcode-log package to v0.7.4 to get latest fix for logging simple arrays.
 - v0.8.5
   - Updated mcode-log package to v0.7.3 to get latest bug fixes and colorization updates.
 - v0.8.3
