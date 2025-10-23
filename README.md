@@ -156,6 +156,9 @@ Contributor's names and contact info...
 
 ## Version History
 
+- v0.8.8
+  - Updated mcode-log package to v0.7.7 to get latest logging enhancements and orange debug.
+  - Updated mcode-data package to v0.6.3 to get new common 'classExport()' and other utilities.
 - v0.8.7
   - Updated mcode-log package to v0.7.5 to get latest fix for logging request/response.
 - v0.8.6
