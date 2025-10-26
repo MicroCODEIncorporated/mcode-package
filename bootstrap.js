@@ -1,5 +1,5 @@
 // #region  F I L E
-// <copyright file="mcode-list/index.js" company="MicroCODE Incorporated">Copyright © 2022-2024 MicroCODE, Inc. Troy, MI</copyright><author>Timothy J. McGuire</author>
+// <copyright file="mcode-package/bootstrap.js" company="MicroCODE Incorporated">Copyright © 2022-2024 MicroCODE, Inc. Troy, MI</copyright><author>Timothy J. McGuire</author>
 // #region  M O D U L E
 // #region  D O C U M E N T A T I O N
 /**
@@ -62,6 +62,13 @@
  *      -----------
  *      1. MIT xPRO Course: Professional Certificate in Coding: Full Stack Development with MERN
  *
+ *      2. MicroCODE JavaScript Style Guide
+ *         Local File: MCX-S02 (Internal JS Style Guide).docx
+ *         https://github.com/MicroCODEIncorporated/JavaScriptSG
+ *
+ *      3. MicroCODE 'mcode-package' collection
+ *         Local File: bootstrap.js
+ *         https://www.npmjs.com/package/mcode-package
  *
  *
  *
@@ -79,14 +86,23 @@
  *       o  https://github.com/MicroCODEIncorporated/JavaScriptSG
  *       o  https://github.com/MicroCODEIncorporated/TemplatesJS
  *
+ * ...be sure to check out the CTRL-SHIFT+K, +L, +J keybaord shortcuts in Visual Studio Code
+ *    for taking advance of the #regions in this file and our templates.
+ *
+ *
  */
+// #endregion
+
+// #region  I M P O R T S
+
+const path = require('path');
+
+// #endregion
 
 // #region  G L O B A L S
 
 console.log('');
 console.log('[BOOTSTRAP] Loading minimum web app environment...');
-
-const path = require('path');
 
 // show NODE the location of our project's Config files
 process.env["NODE_CONFIG_DIR"] = path.resolve(__dirname, './cfg/');
@@ -95,16 +111,25 @@ process.env["NODE_CONFIG_DIR"] = path.resolve(__dirname, './cfg/');
 global.dotenv = require('dotenv');
 global.envMode = process.env.NODE_ENV; // The environment mode (based on NODE_ENV)
 global.envFile = __dirname.includes('.dist') ? path.resolve(__dirname, '.env') : path.resolve(__dirname, `.env.${envMode}`);
-global.dotenv.config({path: envFile});
+global.dotenv.config({path: global.envFile});
 
-// Load your JavaScript extensions
-//~ require('.../prototypes.js');
+// Load our JavaScript extensions
+require('./utx/prototypes.js');
 
 // Make the MicroCODE package available globally, from a single read-only object
-global.mcode = require('mcode-package');  // MicroCODE's packages: mcode-data, mcode-log, mcode-list, ncode-cache, etc.
+global.mcode = require('mcode-package'); // MicroCODE's packages: mcode-data, mcode-log, mcode-list, ncode-cache, etc.
+global.mcode.evtx = require('./ssr/ssr.js').evtx; // add extension to mcode.resx() a function to send HTMX BANNER responses to UI
 
-global.dirBase = __dirname; // process.env.SERVER_DIR; // The base directory of the Server (based on ENV MODE)
-global.urlBase = process.env.SERVER_URL; // The base URL for the Server
+global.dirBase = __dirname; // process.env.UI_SERVER_DIR; // The base directory of the Server (based on ENV MODE)
+global.urlBase = process.env.UI_SERVER_URL; // The base URL for the Server
+
+// App's Database Mode Settings
+global.DB_MODE = 'backend:DB_MODE'; // Define a CACHE Key to control access to database, its either UI_SERVER_DB or UI_SERVER_DBAPI
+global.DB_MODE_PG = process.env.UI_SERVER_DB || 'PostgreSQL';  // Local/Native Database
+global.DB_MODE_API = process.env.UI_SERVER_DBAPI || 'MCODE'; // Remote Database API
+
+// App's Global Namespace
+global.UI_NAMESPACE = process.env.UI_SERVER_NAMESPACE || 'MCODE-APP'; // User Interface (UI)
 
 // #endregion
 
@@ -121,13 +146,20 @@ const MODULE_NAME = 'bootstrap.js';
 mcode.info({
 
     source: MODULE_NAME,
-    envMode: envMode,
-    envFile: envFile,
-    dirBase: dirBase,
-    urlBase: urlBase,
+    envMode: global.envMode,
+    envFile: global.envFile,
+    dirBase: global.dirBase,
+    urlBase: global.urlBase,
     //` env: process.env <-- uncomment for debugging .ENV issues
 
 }, MODULE_NAME);
+
+// add custom globals functions to 'mcode.' here...
+
+// Define our 'root' based on environment...
+mcode.root = typeof globalThis !== 'undefined'
+    ? globalThis
+    : (typeof self !== 'undefined' ? self : (typeof window !== 'undefined' ? window : this));
 
 mcode.success('Successfully loaded minimum web app environment.');
 
