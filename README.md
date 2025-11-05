@@ -156,6 +156,8 @@ Contributor's names and contact info...
 
 ## Version History
 
+- v0.9.0
+  - Updated mcode-data,-log,-list,-cache packages to get latest enhancements and fixes.
 - v0.8.9
   - Updated mcode-log package to v0.7.9 to correct simple object logging to VT and HTML.
 - v0.8.8
