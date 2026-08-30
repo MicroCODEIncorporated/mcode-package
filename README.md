@@ -156,6 +156,8 @@ Contributor's names and contact info...
 
 ## Version History
 
+- v0.9.1
+  - Update mcode-log for 'real' color and mcode-cache for Redis 8.4+ and geo features
 - v0.9.0
   - Updated mcode-data,-log,-list,-cache packages to get latest enhancements and fixes.
 - v0.8.9
