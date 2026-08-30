@@ -163,8 +163,9 @@ try
 }
 catch (exp)
 {
-    // mcode-cache is not installed - OPTIONAL, no error thrown
+    // {AIN-2026-08-26:GPT-5.6 Sol} -- mandatory cache failures cannot yield a partial facade
     _log.exp('mcode-cache failed to load.', MODULE_NAME, exp);
+    throw exp;
 }
 
 // #endregion
